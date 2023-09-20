@@ -4,47 +4,41 @@ import { FaDollarSign, FaBookOpen } from "react-icons/fa";
 import Card from "../Card/Card";
 
 const Course = () => {
+  const [allCourse, setAllCourse] = useState([]);
+  const [selectedCourse, setSelectedCourse] = useState([]);
+  const [remaining, setRemaining] = useState(20);
+  const [totalCredit, setTotalCredit] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
-    const [allCourse, setAllCourse] = useState([]);
-    const [selectedCourse, setSelectedCourse] = useState([]);
-    const [remaining, setRemaining] = useState(20);
-    const [totalCredit, setTotalCredit] = useState(0);
-    const [totalPrice, setTotalPrice] = useState(0)
+  useEffect(() => {
+    fetch("./data.json")
+      .then((res) => res.json())
+      .then((data) => setAllCourse(data));
+  }, []);
 
-    useEffect(() => {
-        fetch("./data.json")
-          .then((res) => res.json())
-          .then((data) => setAllCourse(data));
-    }, []);
-
-    const handleSelectCourse = (course) => {
-        const isHave = selectedCourse.find((item) => item.id == course.id);
-        // eslint-disable-next-line no-unused-vars
-        let remaining = course.credit;
-         let price = course.price;
-        if (isHave) {
-           return alert ('already anrolled')
-        }
-        else{
-            selectedCourse.forEach((item) => {
-                remaining = remaining + item.credit;
-                price = price + item.price;
-            });
-           
-            setTotalCredit(remaining)
-            const totalRemaining = 20 - remaining;
-            setRemaining(totalRemaining)
-            setTotalPrice(price);
-
-
-           
-
-            
-
-            setSelectedCourse([...selectedCourse, course]);
-        }
-        
+  const handleSelectCourse = (course) => {
+    const isHave = selectedCourse.find((item) => item.id == course.id);
+    // eslint-disable-next-line no-unused-vars
+    let remainingCredit = course.credit;
+    let price = course.price;
+    if (isHave) {
+      return alert("already anrolled");
+    } else {
+      selectedCourse.forEach((item) => {
+        remainingCredit = remainingCredit + item.credit;
+        price = price + item.price;
+      });
+      const totalRemaining = 20 - remainingCredit;
+      if (totalRemaining < 0) {
+        alert("No available credit");
+      } else {
+        setRemaining(totalRemaining);
+        setTotalCredit(remainingCredit);
+        setTotalPrice(price);
+        setSelectedCourse([...selectedCourse, course]);
+      }
     }
+  };
 
   return (
     <div>

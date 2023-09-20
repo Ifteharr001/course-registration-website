@@ -12,7 +12,7 @@ const Card = ({ selectedCourse, remaining, totalCredit, totalPrice }) => {
         // eslint-disable-next-line react/prop-types
         selectedCourse.map((course) => (
           // eslint-disable-next-line react/jsx-key
-          <p className="text-sm gap-3">
+          <p className="text-sm gap-3" key={course.id}>
             {count++} {course.title}
           </p>
         ))
