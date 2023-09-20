@@ -1,10 +1,11 @@
 import './App.css'
+import Course from './Components/Course/Course';
 
 function App() {
 
   return (
     <>
-      <h1 className="">Hello world!</h1>
+      <Course></Course>
     </>
   );
 }
