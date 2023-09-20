@@ -18,9 +18,11 @@ const Card = ({ selectedCourse, remaining, totalCredit, totalPrice }) => {
         ))
       }
       <hr className="my-4 " />
-      <h1 className="text-xl font-bold">Total Credit Hour: {totalCredit} </h1>
+      <h1 className="text-md font-[#1C1B1BCC]">
+        Total Credit Hour: {totalCredit}{" "}
+      </h1>
       <hr className="my-4 " />
-      <h1 className="text-xl font-bold">Total Price: {totalPrice}</h1>
+      <h1 className="text-md font-[#1C1B1BCC]">Total Price: {totalPrice}</h1>
     </div>
   );
 };

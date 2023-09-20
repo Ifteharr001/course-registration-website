@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { FaDollarSign, FaBookOpen } from "react-icons/fa";
 import Card from "../Card/Card";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Course = () => {
   const [allCourse, setAllCourse] = useState([]);
@@ -22,7 +24,7 @@ const Course = () => {
     let remainingCredit = course.credit;
     let price = course.price;
     if (isHave) {
-      return alert("already anrolled");
+      return toast("Already Exist");
     } else {
       selectedCourse.forEach((item) => {
         remainingCredit = remainingCredit + item.credit;
@@ -30,7 +32,7 @@ const Course = () => {
       });
       const totalRemaining = 20 - remainingCredit;
       if (totalRemaining < 0) {
-        alert("No available credit");
+        toast("No Available Credit");
       } else {
         setRemaining(totalRemaining);
         setTotalCredit(remainingCredit);
@@ -82,6 +84,7 @@ const Course = () => {
             </div>
           ))}
         </div>
+        <ToastContainer />
         <div className="text-xl font bold p-3 w-[25%] ">
           <Card
             selectedCourse={selectedCourse}
