@@ -6,7 +6,10 @@ import Card from "../Card/Card";
 const Course = () => {
 
     const [allCourse, setAllCourse] = useState([]);
-    const [selectedCourse, setSelectedCourse] = useState([])
+    const [selectedCourse, setSelectedCourse] = useState([]);
+    const [remaining, setRemaining] = useState(20);
+    const [totalCredit, setTotalCredit] = useState(0);
+    const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(() => {
         fetch("./data.json")
@@ -16,11 +19,29 @@ const Course = () => {
 
     const handleSelectCourse = (course) => {
         const isHave = selectedCourse.find((item) => item.id == course.id);
+        // eslint-disable-next-line no-unused-vars
+        let remaining = course.credit;
+         let price = course.price;
         if (isHave) {
            return alert ('already anrolled')
         }
         else{
-            setSelectedCourse([...selectedCourse, course])
+            selectedCourse.forEach((item) => {
+                remaining = remaining + item.credit;
+                price = price + item.price;
+            });
+           
+            setTotalCredit(remaining)
+            const totalRemaining = 20 - remaining;
+            setRemaining(totalRemaining)
+            setTotalPrice(price);
+
+
+           
+
+            
+
+            setSelectedCourse([...selectedCourse, course]);
         }
         
     }
@@ -68,7 +89,12 @@ const Course = () => {
           ))}
         </div>
         <div className="text-xl font bold p-3 w-[25%] ">
-          <Card selectedCourse={selectedCourse}></Card>
+          <Card
+            selectedCourse={selectedCourse}
+            remaining={remaining}
+            totalCredit={totalCredit}
+            totalPrice={totalPrice}
+          ></Card>
         </div>
       </div>
     </div>
