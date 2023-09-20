@@ -47,8 +47,8 @@ const Course = () => {
           Course Registration
         </h1>
       </div>
-      <div className="flex my-5">
-        <div className="w-[75%] mx-auto flex flex-wrap gap-3 justify-center">
+      <div className=" justify-between my-5 grid grid-cols-1 md:grid-cols-2 lg:flex">
+        <div className="w-[75%] mx-auto  gap-3 justify-center grid grid-cols-1 lg:grid-cols-3 md:grid-cols-1">
           {allCourse.map((course) => (
             <div
               key={course.id}
