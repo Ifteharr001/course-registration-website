@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Introduction to C Programming",
     "img": "https://i.ibb.co/g9hJ4kj/Rectangle-2-2.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "An introductory course exploring the fundamentals of C programming, covering syntax, data types, control structures, and basic programming concepts.",
     "price": 15000,
     "credit": 1
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "title": "Introduction to Algorithms",
     "img": "https://i.ibb.co/3zCnxFg/Rectangle-2-3.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Introduction to Algorithms is a foundational textbook that explores key algorithmic concepts and strategies, serving as a guide for computer scientists",
     "price": 25000,
     "credit": 2
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "title": "Introduction to C++ for DSA",
     "img": "https://i.ibb.co/Pm1JhcX/Rectangle-2-4.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "An introductory course exploring C++ programming, focusing on its application in Data Structures and Algorithms (DSA). Fundamental concepts and practical implementation.",
     "price": 10000,
     "credit": 10
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "title": "Basic Data Structure",
     "img": "https://i.ibb.co/55kTXnn/Rectangle-3.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Basic data structures are fundamental tools in computer science, enabling efficient storage and manipulation of data, including arrays, lists, and trees.",
     "price": 35000,
     "credit": 5
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "title": "Introduction to OOP Python",
     "img": "https://i.ibb.co/Dw7Lwtj/Rectangle-2.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Learn the fundamentals of Object-Oriented Programming (OOP) in Python, including classes, objects, inheritance, and encapsulation, for efficient code organization.",
     "price": 19000,
     "credit": 5
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "title": "Software Engineering",
     "img": "https://i.ibb.co/XFC7VJK/Rectangle-2-5.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Software engineering is the systematic process of designing, developing, testing, and maintaining software applications to meet specific functional and quality requirements.",
     "price": 23000,
     "credit": 2
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "title": "AWS, Cloud Computing",
     "img": "https://i.ibb.co/hF9hZjC/Rectangle-3-1.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Amazon Web Services (AWS) is a leading provider of cloud computing services, offering scalable, reliable, and cost-effective solutions for businesses worldwide.",
     "price": 35000,
     "credit": 5
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "title": "Database (MySQL)",
     "img": "https://i.ibb.co/drNQGbk/Rectangle-2-1.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "MySQL is a widely-used relational database management system known for its efficiency, scalability, and support for various applications and platforms.",
     "price": 19000,
     "credit": 5
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "title": "Problem-Solving Part",
     "img": "https://i.ibb.co/Fz910S3/Rectangle-2-6.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Problem-Solving Part: This section focuses on applying analytical skills and creative thinking to find effective solutions to various challenges.",
     "price": 23000,
     "credit": 2
   }
